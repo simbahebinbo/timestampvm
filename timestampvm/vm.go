@@ -412,14 +412,15 @@ func (*VM) AppResponse(_ context.Context, _ ids.NodeID, _ uint32, _ []byte) erro
 }
 
 // This VM doesn't (currently) have any app-specific messages
+func (*VM) AppRequestFailed(_ context.Context, _ ids.NodeID, _ uint32, _ *common.AppError) error {
+	return nil
+}
+
 func (*VM) CrossChainAppRequest(_ context.Context, _ ids.ID, _ uint32, _ time.Time, _ []byte) error {
 	return nil
 }
 
 func (*VM) CrossChainAppResponse(_ context.Context, _ ids.ID, _ uint32, _ []byte) error {
-	return nil
-}
-func (*VM) AppRequestFailed(_ context.Context, _ ids.NodeID, _ uint32, _ *common.AppError) error {
 	return nil
 }
 
