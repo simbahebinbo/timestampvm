@@ -412,7 +412,6 @@ func (*VM) AppResponse(_ context.Context, _ ids.NodeID, _ uint32, _ []byte) erro
 }
 
 // This VM doesn't (currently) have any app-specific messages
-
 func (*VM) CrossChainAppRequest(_ context.Context, _ ids.ID, _ uint32, _ time.Time, _ []byte) error {
 	return nil
 }
@@ -420,14 +419,14 @@ func (*VM) CrossChainAppRequest(_ context.Context, _ ids.ID, _ uint32, _ time.Ti
 func (*VM) CrossChainAppResponse(_ context.Context, _ ids.ID, _ uint32, _ []byte) error {
 	return nil
 }
-func (vm *VM) AppRequestFailed(_ context.Context, _ ids.NodeID, _ uint32, _ *common.AppError) error {
+func (*VM) AppRequestFailed(_ context.Context, _ ids.NodeID, _ uint32, _ *common.AppError) error {
 	return nil
 }
 
-func (vm *VM) CrossChainAppRequestFailed(_ context.Context, _ ids.ID, _ uint32, _ *common.AppError) error {
+func (*VM) CrossChainAppRequestFailed(_ context.Context, _ ids.ID, _ uint32, _ *common.AppError) error {
 	return nil
 }
 
-func (vm *VM) GetBlockIDAtHeight(_ context.Context, _ uint64) (ids.ID, error) {
+func (*VM) GetBlockIDAtHeight(_ context.Context, _ uint64) (ids.ID, error) {
 	return ids.Empty, nil
 }
