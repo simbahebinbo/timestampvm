@@ -420,11 +420,11 @@ func (*VM) CrossChainAppRequest(_ context.Context, _ ids.ID, _ uint32, _ time.Ti
 	return nil
 }
 
-func (*VM) CrossChainAppResponse(_ context.Context, _ ids.ID, _ uint32, _ []byte) error {
+func (*VM) CrossChainAppRequestFailed(_ context.Context, _ ids.ID, _ uint32, _ *common.AppError) error {
 	return nil
 }
 
-func (*VM) CrossChainAppRequestFailed(_ context.Context, _ ids.ID, _ uint32, _ *common.AppError) error {
+func (*VM) CrossChainAppResponse(_ context.Context, _ ids.ID, _ uint32, _ []byte) error {
 	return nil
 }
 
